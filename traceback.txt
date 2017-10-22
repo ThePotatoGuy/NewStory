@@ -1,0 +1,39 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 22, in script call
+    call ch0_main
+  File "game/script-ch0.rpy", line 25, in script call
+    call showpoem(poem_n2)
+  File "game/poems.rpy", line 62, in script
+    show screen poem(poem)
+  File "renpy/common/000statements.rpy", line 458, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+Exception: Screen poem is not known.
+
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 22, in script call
+    call ch0_main
+  File "game/script-ch0.rpy", line 25, in script call
+    call showpoem(poem_n2)
+  File "game/poems.rpy", line 62, in script
+    show screen poem(poem)
+  File "C:\renpy-6.99.12.4-sdk\renpy\ast.py", line 1706, in execute
+    self.call("execute")
+  File "C:\renpy-6.99.12.4-sdk\renpy\ast.py", line 1724, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\renpy-6.99.12.4-sdk\renpy\statements.py", line 145, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 458, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+  File "C:\renpy-6.99.12.4-sdk\renpy\display\screen.py", line 1012, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen poem is not known.
+
+
+Windows-7-6.1.7601-SP1
+Ren'Py 6.99.12.4.2187
+Doki Doki Literature Club: A New Story! 0.01
