@@ -1,8 +1,9 @@
 init python:
     menu_trans_time = 1
-    splash_message_default = "If you haven't played the original,\ngo do that first."
+    splash_message_default = "Here's lookin' at you, /ddlc/."
     splash_messages = [
-    "Wait, you're not supposed to see this.\nForget this ever happened."
+    "Wait, you're not supposed to see this.\nForget this ever happened.",
+    "Here's lookin' at you, /ddlc/."
     ]
     
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5,yalign=0.5)

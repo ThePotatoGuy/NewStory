@@ -49,10 +49,11 @@ define audio.fall = "sfx/fall.ogg"
 #Backgrounds
 image black = "#000000"
 image dark = "#000000e4"
-image darkred = "#110000c8"
+image sunset = "#aa502040"
+image night = "#11005540"
 image white = "#ffffff"
 image splash = "bg/splash.png"
-image bg residential_day = "bg/residential.png"
+image bg homes_day = "bg/residential.png"
 image bg classroom = "bg/class.png"
 image bg hall = "bg/hall.png"
 image bg club = "bg/club.png"
@@ -61,6 +62,9 @@ image bg bedroom = "bg/bedroom.png"
 image bg house = "bg/house.png"
 image bg kitchen = "bg/kitchen.png"
 image bg notebook = "bg/notebook.png"
+image bg house2 = "bg/house2.png"
+image bg homes_night = "bg/residential_night.png"
+image bg house_sunset = "bg/house_eve.png"
 
 #Sayori Sprites
 #School - Neutral
