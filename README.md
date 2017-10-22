@@ -7,4 +7,5 @@ In essence, this project aims to deliver a more straightforward VN/dating sim ex
 I am in no way attempting to replace or remake the original game, so *please* go play that first if you haven't already.
 
 For those of you who remain, I hope you enjoy getting to date your waifu!
+
 ...At least, that's what I *would* say if the game was finished.
