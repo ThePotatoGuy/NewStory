@@ -1,5 +1,4 @@
-# Doki Doki Literature Club:
-## A New Story!
+![Doki Doki Literature Club: A New Story!](https://i.imgur.com/2NuxBV4.png)
 
 This is a mod for the free game: Doki Doki Literature Club by Team Salvato, available for download [here](http://ddlc.moe/) or on Steam. I do not own any part of this game.
 
