@@ -6,41 +6,12 @@ init python:
             self.text = text
 
     poem_n2 = Poem(
-    author = "natsuki",
-    title = "Amy Likes Niggers",
+    author = "monika",
+    title = "Placeholder",
     text = """\
-You know what I heard about Amy?
-Amy likes niggers.
-Icky, wriggly, hairy, ugly niggers!
-That's why I'm not friends with her.
-
-Amy has a cute singing voice.
-I heard her singing my favorite love song.
-Every time she sang the chorus, my heart would pound to the rhythm of the words.
-But she likes niggers.
-That's why I'm not friends with her.
-
-One time, I hurt my leg really bad.
-Amy helped me up and took me to the nurse.
-I tried not to let her touch me.
-She likes niggers, so her hands are probably gross.
-That's why I'm not friends with her.
-
-Amy has a lot of friends.
-I always see her talking to people.
-She probably talks about niggers.
-What if her friends start to like niggers too?
-That's why I'm not friends with her.
-
-It doesn't matter if she has other hobbies.
-It doesn't matter if she keeps it private.
-It doesn't matter if it doesn't hurt anyone.
-
-It's gross.
-She's gross.
-The world is better off without nigger lovers.
-
-And I'm gonna tell everyone."""
+It's a Placeholder.
+This is just to hold a place.
+Placeholder poem."""
     )
 
 image paper =  "images/bg/poem.jpg"

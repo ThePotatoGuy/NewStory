@@ -19,7 +19,7 @@ label start:
     
     #Intro
     $ chapter = 0
-    call ch0_main
+    call poem
     
     call endgame
     

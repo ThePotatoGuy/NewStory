@@ -1053,6 +1053,9 @@ default s_poemappeal = [0, 0, 0]
 default y_poemappeal = [0, 0, 0]
 default m_poemappeal = [0, 0, 0]
 
+#The last winner of the poem minigame
+default poemwinner = ['sayori','sayori','sayori']
+
 #Keeping track of who read your poem when you're showing it to each of the girls.
 default s_readpoem = False
 default n_readpoem = False
