@@ -218,7 +218,7 @@ label poem(transition=True):
                 for i in range(5):
                     word = random.choice(wordlist)
                     wordlist.remove(word)
-                    ui.textbutton(word.word, clicked=ui.returns(word), text_style="poemgame_text", xpos=x, ypos=i * 56 + ystart)
+                ui.textbutton(word.word, clicked=ui.returns(word), text_style="poemgame_text", xpos=x, ypos=i * 56 + ystart)
                 ui.close()
         
             t = ui.interact()
