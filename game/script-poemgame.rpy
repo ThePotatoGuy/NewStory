@@ -26,7 +26,7 @@ init python:
             #File format: word,mPoint,nPoint,sPoint,yPoint
             x = line.split(',')
             full_wordlist.append(PoemWord(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4])))
-
+            
             
     monikaTime = renpy.random.random() * 4 + 4
     natsukiTime = renpy.random.random() * 4 + 4
@@ -207,6 +207,7 @@ label poem(transition=True):
         
         
         # Main loop for drawing and selecting words
+        madlibs = []
         while True:
             ystart = 160
             pstring = str(progress)
@@ -219,6 +220,7 @@ label poem(transition=True):
                     word = random.choice(wordlist)
                     wordlist.remove(word)
                     ui.textbutton(word.word, clicked=ui.returns(word), text_style="poemgame_text", xpos=x, ypos=i * 56 + ystart)
+                    madlibs.append(word)
                 ui.close()
         
             t = ui.interact()
@@ -262,6 +264,8 @@ label poem(transition=True):
         #Poem winner always loves
         exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
         
+    call showpoem(poem_mc1)
+    
     $ config.allow_skipping = True
     $ allow_skipping = True
     stop music fadeout 2.0

@@ -4,3 +4,8 @@ log.txt
 traceback.txt
 *.save
 *.rpyc
+*.rpyb
+*.rpyc
+*.txt~
+*.rpy~
+*.rpyc

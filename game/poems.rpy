@@ -5,13 +5,64 @@ init python:
             self.title = title
             self.text = text
 
-    poem_n2 = Poem(
-    author = "monika",
-    title = "Placeholder",
+    poem_mc1 = Poem(
+    author = "mc",
+    title = "Placeholder no. 1",
     text = """\
-It's a Placeholder.
+The first Placeholder.
 This is just to hold a place.
-Placeholder poem."""
+Placeholder poem.
+
+[madlibs[0]]
+[madlibs[1]]
+[madlibs[2]]
+[madlibs[3]]
+[madlibs[4]]
+[madlibs[5]]
+[madlibs[6]]
+[madlibs[7]]
+[madlibs[8]]
+[madlibs[9]]
+[madlibs[10]]
+[madlibs[11]]
+[madlibs[12]]
+[madlibs[13]]
+[madlibs[14]]
+[madlibs[15]]
+[madlibs[16]]
+[madlibs[17]]
+[madlibs[18]]
+[madlibs[19]]"""
+    )
+    
+    poem_mc2 = Poem(
+    author = "mc",
+    title = "Placeholder no. 2",
+    text = """\
+Second Placeholder.
+This is just to hold a place.
+Placeholder poem.
+
+[madlibs[0]]
+[madlibs[1]]
+[madlibs[2]]
+[madlibs[3]]
+[madlibs[4]]
+[madlibs[5]]
+[madlibs[6]]
+[madlibs[7]]
+[madlibs[8]]
+[madlibs[9]]
+[madlibs[10]]
+[madlibs[11]]
+[madlibs[12]]
+[madlibs[13]]
+[madlibs[14]]
+[madlibs[15]]
+[madlibs[16]]
+[madlibs[17]]
+[madlibs[18]]
+[madlibs[19]]"""
     )
 
 image paper =  "images/bg/poem.jpg"
@@ -36,18 +87,15 @@ screen poem(currentpoem, paper="paper"):
         vbox:
             null height 40
             if currentpoem.author == "yuri":
-                if currentpoem.yuri_2:
-                    text "[currentpoem.title]\n\n[currentpoem.text]" style "yuri_text"
-                elif currentpoem.yuri_3:
-                    text "[currentpoem.title]\n\n[currentpoem.text]" style "yuri_text_3"
-                else:
-                    text "[currentpoem.title]\n\n[currentpoem.text]" style "yuri_text"
+                text "[currentpoem.title]\n\n[currentpoem.text]" style "yuri_text"
             elif currentpoem.author == "sayori":
                 text "[currentpoem.title]\n\n[currentpoem.text]" style "sayori_text"
             elif currentpoem.author == "natsuki":
                 text "[currentpoem.title]\n\n[currentpoem.text]" style "natsuki_text"
             elif currentpoem.author == "monika":
                 text "[currentpoem.title]\n\n[currentpoem.text]" style "monika_text"
+            elif currentpoem.author == "mc":
+                text "[currentpoem.title]\n\n[currentpoem.text]" style "mc_text"
             null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
     
@@ -89,6 +137,12 @@ style sayori_text:
 style monika_text:
     font "gui/font/m1.ttf"
     size 34
+    color "#000"
+    outlines []
+    
+style mc_text:
+    font "gui/font/mc.ttf"
+    size 24
     color "#000"
     outlines []
 

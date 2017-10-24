@@ -48,7 +48,7 @@ define audio.fall = "sfx/fall.ogg"
 
 #Backgrounds
 image black = "#000000"
-image dark = "#000000e4"
+image dark = "#00000080"
 image sunset = "#aa502040"
 image night = "#11005540"
 image white = "#ffffff"
@@ -1028,7 +1028,7 @@ image monika 5b = im.Composite((960, 960), (0, 0), "monika/3b.png")
 
 #Character Variables
 define narrator = Character(ctc="ctc", ctc_position="fixed")
-define mc = DynamicCharacter('player', who_outlines=[(3, "#b59", 0, 0), (1, "#b59", 1, 1)],what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define mc = DynamicCharacter('player', who_outlines=[(3, "#7f7f7f", 0, 0), (1, "#7f7f7f", 1, 1)],what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='sayori', who_outlines=[(3, "#73d3fd", 0, 0), (1, "#73d3fd", 1, 1)],what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define m = DynamicCharacter('m_name', image='monika', who_outlines=[(3, "#a3d753", 0, 0), (1, "#a3d753", 1, 1)], what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define n = DynamicCharacter('n_name', image='natsuki', who_outlines=[(3, "#ef3c9e", 0, 0), (1, "#ef3c9e", 1, 1)],what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
