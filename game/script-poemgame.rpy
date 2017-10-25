@@ -175,6 +175,7 @@ label poem(transition=True):
     $ config.skipping = False
     $ config.allow_skipping = False
     $ allow_skipping = False
+    $ madlibs = []
     if chapter == 0:
         call screen dialog("It's time to write!\n\nPick words you think your favorite club member\nwill like. Once you finish, make sure to\nread over what you wrote.\n\nRemember, whoever likes your work the most\nwill take an interest in you!", ok_action=Return())
     python:
@@ -203,11 +204,7 @@ label poem(transition=True):
         sayoriZoom = 1
         yuriZoom = 1
         
-        
-        
-        
         # Main loop for drawing and selecting words
-        madlibs = []
         while True:
             ystart = 160
             pstring = str(progress)
@@ -220,7 +217,8 @@ label poem(transition=True):
                     word = random.choice(wordlist)
                     wordlist.remove(word)
                     ui.textbutton(word.word, clicked=ui.returns(word), text_style="poemgame_text", xpos=x, ypos=i * 56 + ystart)
-                    madlibs.append(word)
+                    # we need the word stored inthe PoemWord object
+                    madlibs.append(word.word)
                 ui.close()
         
             t = ui.interact()
@@ -264,7 +262,7 @@ label poem(transition=True):
         #Poem winner always loves
         exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
         
-    call showpoem(poem_mc1)
+    call showpoem(poem_mc1,madlibs=madlibs)
     
     $ config.allow_skipping = True
     $ allow_skipping = True

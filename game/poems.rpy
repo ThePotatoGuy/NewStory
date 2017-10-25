@@ -5,37 +5,13 @@ init python:
             self.title = title
             self.text = text
 
+
+
     poem_mc1 = Poem(
     author = "mc",
     title = "Placeholder no. 1",
-    text = """\
-The first Placeholder.
-This is just to hold a place.
-Placeholder poem.
+    text = "The first Placeholder.\nThis is just to hold a place.\n")
 
-{0}
-{1}
-{2}
-{3}
-{4}
-{5}
-{6}
-{7}
-{8}
-{9}
-{10}
-{11}
-{12}
-{13}
-{14}
-{15}
-{16}
-{17}
-{18}
-{19}"""
-    
-    formattedText = text.format(madlibs[0], madlibs[1], madlibs[2], madlibs[3], madlibs[4], madlibs[5], madlibs[6], madlibs[7], madlibs[8], madlibs[9], madlibs[10], madlibs[11], madlibs[12], madlibs[13], madlibs[14], madlibs[15], madlibs[16], madlibs[17], madlibs[18], madlibs[19])
-    )
     
     poem_mc2 = Poem(
     author = "mc",
@@ -148,7 +124,8 @@ style mc_text:
     color "#000"
     outlines []
 
-label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, where=i11, paper=None):
+# added madlibs as a parameter here so we can handle regular poems as well
+label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, where=i11, paper=None, madlibs=None):
     if poem == None:
         return
     play sound page_turn
@@ -161,6 +138,15 @@ label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, w
         stop music fadeout 2.0
         $ renpy.music.play(audio.t5b, channel="music_poem", fadein=2.0, tight=True)
     window hide
+
+    # add madlibs to poem
+    python:
+        if madlibs:
+            # just looping thru, the madlibs list
+            for i in range(0,len(madlibs)):
+                # and adding it to the poem text 
+                poem.text += madlibs[i]+"\n" 
+
     if paper:
         show screen poem(poem, paper=paper)
     else:
